@@ -17,16 +17,19 @@ module SkCalendar
     def self.sk_calendar_file
       project_root + '/data/Singkreis-2018.ics'
     end
+
     ##
     # @return [String] the path to the school-holidays ics input file.
     def self.holidays_calendar_file
       project_root + '/data/Ferien_baden-wuerttemberg_2018.ics'
     end
+
     ##
     # @return [String] the path to the  ics input file.
     def self.month_file
       project_root + '/data/Lied_des_Monats.ics'
     end
+
     ##
     # @return [String] the path to the locale file.
     def self.locale

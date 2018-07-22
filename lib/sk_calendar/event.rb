@@ -55,7 +55,7 @@ module SkCalendar
         <div class="panel panel-default">
           <div class="panel-body">
             <h3 class="panel-title">#{start_end_time}
-              <span class="sk-cal-summary"> 
+              <span class="sk-cal-summary">
                 :: #{@occurrence.summary}
               </span>
                #{formatted_location}
@@ -74,7 +74,7 @@ module SkCalendar
         <div class="panel panel-primary">
           <div class="panel-heading">
              <h3 class="panel-title" style="color:white;">#{start_end_time}
-               <span class="sk-cal-summary"> 
+               <span class="sk-cal-summary">
                :: #{@occurrence.summary}
                </span>
                #{formatted_location}
@@ -101,7 +101,10 @@ module SkCalendar
     end
 
     ##
-    # @return [String] the day when this event starts
+    # Nicely formats the start and end time of this event.
+    #
+    #
+    # @return [String] the day and time of day when this event starts and ends
     def start_end_time
       if @occurrence.all_day?
         if @occurrence.multi_day?
@@ -136,7 +139,7 @@ module SkCalendar
     ##
     # @return [String] the month when this event starts
     def start_month
-        I18n.l @occurrence.start_time, format: '%B'
+      I18n.l @occurrence.start_time, format: '%B'
     end
 
     ##
@@ -157,6 +160,7 @@ module SkCalendar
       return '' unless @occurrence.location
       "<span class='pull-right'>#{@occurrence.location}</span>"
     end
+
     ##
     # @return [String] the occurrences description formatted as an HTML stream.
     def formatted_description
@@ -165,7 +169,7 @@ module SkCalendar
       # we' ll interpret the description as a markdown text
       doc = Kramdown::Document.new(@occurrence.description)
       <<~HTML
-        <div class="panel-body">  
+        <div class="panel-body">
           #{doc.to_html}
         </div>
       HTML

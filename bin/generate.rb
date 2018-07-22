@@ -10,8 +10,6 @@ using Icalendar::Scannable
 BEGIN_TIME =   Time.now
 CLOSING_TIME = Date.new(2019, 1, 1)
 
-
-
 def scan_calendar(filename)
   cal_file = File.open(filename)
   calendar = Icalendar::Calendar.parse(cal_file).first
@@ -31,7 +29,7 @@ html_file = File.new(SkCalendar::Config.outfile, 'w')
 
 html_file.puts "<p>Stand #{I18n.l BEGIN_TIME, format: '%d. %B %Y'} </p>"
 
-full_scan.each_with_index do |occurrence,index|
+full_scan.each_with_index do |occurrence, index|
   # put a read-more ruler before the third event
   html_file.puts '<hr id="system-readmore"/>' if index == 3
 

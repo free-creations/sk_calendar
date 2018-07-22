@@ -10,7 +10,7 @@ GIT
 PATH
   remote: .
   specs:
-    sk_calendar (0.1.0)
+    sk_calendar (0.1.1)
       i18n (~> 1.0, >= 1.0.1)
       icalendar-rrule (~> 0.1.3)
       kramdown
