@@ -22,7 +22,7 @@ Gem::Specification.new do |gem_spec|
   gem_spec.require_paths = ['lib']
 
   gem_spec.add_dependency 'i18n', '~> 1.0', '>= 1.0.1'
-  gem_spec.add_dependency 'icalendar-rrule', '~> 0.1.3'
+  gem_spec.add_dependency 'icalendar-rrule', '~> 0.1.6'
   gem_spec.add_dependency 'kramdown'
 
   gem_spec.add_development_dependency 'bundler', '~> 1.16'

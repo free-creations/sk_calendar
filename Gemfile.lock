@@ -1,18 +1,9 @@
-GIT
-  remote: https://github.com/free-creations/icalendar-rrule
-  revision: 5ea8d2f6e1bd5106faab0e454e310815b85cba21
-  specs:
-    icalendar-rrule (0.1.4)
-      activesupport (~> 5.1)
-      icalendar (~> 2.4)
-      ice_cube (~> 0.16)
-
 PATH
   remote: .
   specs:
-    sk_calendar (0.1.1)
+    sk_calendar (0.1.2)
       i18n (~> 1.0, >= 1.0.1)
-      icalendar-rrule (~> 0.1.3)
+      icalendar-rrule (~> 0.1.6)
       kramdown
 
 GEM
@@ -30,12 +21,16 @@ GEM
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     icalendar (2.4.1)
-    ice_cube (0.16.2)
+    icalendar-rrule (0.1.6)
+      activesupport (~> 5.1)
+      icalendar (~> 2.4)
+      ice_cube (~> 0.16)
+    ice_cube (0.16.3)
     json (2.1.0)
     kramdown (1.17.0)
     minitest (5.11.3)
     parallel (1.12.1)
-    parser (2.5.1.0)
+    parser (2.5.1.2)
       ast (~> 2.4.0)
     powerpack (0.1.2)
     rainbow (3.0.0)
@@ -78,7 +73,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  icalendar-rrule!
   rake (~> 10.0)
   rspec (~> 3.7)
   rubocop (~> 0.55.0)

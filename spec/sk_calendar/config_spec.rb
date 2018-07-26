@@ -6,7 +6,7 @@ RSpec.describe SkCalendar::Config do
   end
 
   it 'indicates the calendar input file' do
-    expect(described_class.calendar_file).not_to be nil
+    expect(described_class.sk_calendar_file).not_to be nil
   end
 
   it 'indicates the project root which is a directory' do

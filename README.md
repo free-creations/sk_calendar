@@ -1,6 +1,8 @@
 # sk_calendar
 This application demonstrates the use of the [icalendar-rrule gem](https://github.com/free-creations/icalendar-rrule).
 
+Here is the main program:
+
 ```ruby {.line-numbers}
 #! /usr/bin/ruby
 # frozen_string_literal: true
@@ -13,13 +15,14 @@ using Icalendar::Scannable
 
 SkCalendar::Config.setup
 
-BEGIN_TIME =   Time.now
-CLOSING_TIME = Date.new(2019, 1, 1)
+# specify the time time span we want to show on our home page.
+BEGIN_TIME =   Time.now              # from today
+CLOSING_TIME = Date.new(2019, 1, 1)  # until end of the year
 
 ##
 # Scans the the icalendar-file with the given name.
 #
-# @return[Array<Icalendar::Rrule::Occurrence>] a list of all events in the calendar.
+# @return[Array<Icalendar::Rrule::Occurrence>] a list of all events within the given time span.
 def scan_calendar(filename)
   cal_file = File.open(filename)
   calendar = Icalendar::Calendar.parse(cal_file).first
