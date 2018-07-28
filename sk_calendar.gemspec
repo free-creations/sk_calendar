@@ -13,7 +13,7 @@ Gem::Specification.new do |gem_spec|
   gem_spec.email         = ['harald@free-creations.de']
 
   gem_spec.summary       = 'A generator for the singkreis calendar. '
-  gem_spec.homepage      = 'https://github.com/free-creations/icalendar-rrule'
+  gem_spec.homepage      = 'https://github.com/free-creations/sk_calendar'
   gem_spec.license       = 'MIT'
 
   gem_spec.files = `git ls-files -z`.split("\x0").reject do |f|
