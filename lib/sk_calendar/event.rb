@@ -42,7 +42,7 @@ module SkCalendar
     def to_html_month
       <<~HTML
         <!--  ...................................... -->
-        <hr />
+        <hr style="border-top: 2px solid #B40000;">
         <h2>#{start_month} <small> - #{@occurrence.summary} #{formatted_location}</small></h2>
       HTML
     end
